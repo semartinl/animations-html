@@ -5,6 +5,7 @@ import PlayIcon from "../../public/icons/PlayIcon";
 import AnimationElementComplex from "../components/AnimationElements/AnimationElementComplex";
 import { useAnimations } from "../hooks/useAnimations";
 import CopyPopover from "../components/CopyPopover";
+import CaretDown from "../../public/icons/CaretDown";
 export default function Dropdowns() {
   const dropdownTarget = useRef();
   const { filteredList, setSelectedType, selectedType, availableTypes } =
@@ -51,14 +52,21 @@ export default function Dropdowns() {
             e.target.parentElement.classList.toggle("open");
           }}
         >
-          {selectedType}
+          <span
+            className="typeSelected"
+            onClick={(e) => {
+              e.target.parentElement.parentElement.classList.toggle("open");
+            }}
+          >
+            {selectedType}
+          </span>
           <span
             className="arrow"
             onClick={(e) => {
               e.target.parentElement.parentElement.classList.toggle("open");
             }}
           >
-            &#8744;
+            <CaretDown />
           </span>
         </button>
 
