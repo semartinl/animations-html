@@ -1,0 +1,78 @@
+/* Estilos del contenedor Popover */
+.code-popover {
+  width: 90%;
+  max-width: 650px;
+  background: #1e1e1e; /* Estilo Dark Mode tipo VS Code */
+  color: #d4d4d4;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  margin: auto; /* Lo centra en el top layer */
+}
+
+/* El fondo oscurecido */
+.code-popover::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.popover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.code-block {
+  background: #0d0d0d;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.block-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #252526;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+pre {
+  padding: 1rem;
+  margin: 0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.close-icon {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.popover-copy-btn {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border: none;
+  border-radius: 9999px;
+  padding: 4px;
+  transition: all 0.1s ease;
+  cursor: pointer;
+  svg {
+    width: 24px;
+  }
+  &:hover {
+    /* background: hsl(from var(--primary-container) h s calc(l - 5)); */
+    background: var(--primary);
+    transition: all 0.2s ease;
+    color: var(--on-primary);
+  }
+}

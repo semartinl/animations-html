@@ -1,0 +1,228 @@
+:root {
+  --color-barra-lateral: hsl(204, 100%, 50%);
+
+  --color-texto: black;
+  --color-texto-menu: gray;
+
+  --color-button: hsl(0, 0%, 0%);
+  --color-button-texto: white;
+
+  --color-hover-button: gray;
+  --color-hover-button-texto: white;
+
+  --color-menu-hover: rgb(238, 238, 238);
+  --color-menu-hover-texto: black;
+
+  --color-linea: rgb(238, 238, 238);
+
+  --active-link: hsl(from var(--color-button) h s calc(l + 90));
+  --bg-active-link: hsl(
+    from var(--color-barra-lateral) h calc(s - 50) calc(l - 10)
+  );
+}
+
+.sidebarSpan {
+  font-size: 18px;
+  width: 100px;
+  transition:
+    opacity 0.4s ease,
+    width 0.4s ease;
+  opacity: 1;
+  text-align: left;
+  white-space: nowrap;
+}
+.sidebarSpan.oculto {
+  width: 0;
+  opacity: 0;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  padding: 20px 15px;
+  background: var(--color-barra-lateral);
+  transition: width 0.3s ease;
+  margin-right: 20px;
+}
+#cloud {
+  background: none;
+  border: none;
+  text-align: center;
+
+  height: auto;
+  width: 30px;
+  cursor: pointer;
+}
+.mini-sidebar {
+  width: 80px;
+  .hero-menu {
+    justify-content: center;
+  }
+}
+
+.hero-menu {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  span {
+    font-size: 25px;
+  }
+}
+
+.button {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-button);
+  color: var(--color-button-texto);
+  margin-bottom: 20px;
+  text-decoration: none;
+  svg {
+    width: 25px;
+  }
+
+  span.oculto {
+    opacity: 0;
+    width: 0;
+  }
+}
+.sidebar .nav-item .active {
+  color: var(--active-link);
+  background: var(--bg-active-link);
+}
+.nav-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+
+  a {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    color: var(--color-texto-menu);
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+
+    svg {
+      width: 25px;
+      min-width: 50px !important;
+    }
+
+    span.oculto {
+      opacity: 0;
+      width: 0;
+    }
+  }
+  a:hover {
+    background: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+  }
+}
+.linea {
+  width: 100%;
+  height: 1px;
+  background: var(--color-linea);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.black-mode {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+
+  .info {
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+
+    ion-icon {
+      font-size: 20px;
+      width: 50px;
+    }
+  }
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+}
+#toggleSwitch {
+  display: flex;
+  align-items: center;
+}
+.slider {
+  width: 50px;
+  height: 25px;
+  background: var(--color-button);
+  border-radius: 99999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--color-button-texto);
+    top: 5px;
+    left: 5px;
+    transition: left 0.4s ease;
+  }
+}
+#toggleSwitch input[type="checkbox"]:checked + .slider {
+  background: green;
+}
+#toggleSwitch input[type="checkbox"]:checked + .slider::after {
+  left: 30px;
+}
+#toggleSwitch input[type="checkbox"] {
+  display: none;
+}
+
+@media (prefers-color-scheme: system) {
+  :root {
+    --color-barra-lateral: black;
+    --color-texto: white;
+    --color-texto-menu: gray;
+    --color-button: white;
+    --color-button-texto: black;
+    --color-hover-button: gray;
+    --color-hover-button-texto: white;
+    --color-menu-hover: rgb(238, 238, 238);
+    --color-menu-hover-texto: black;
+    --color-linea: rgb(238, 238, 238);
+  }
+}

@@ -1,0 +1,170 @@
+.animations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  h3 {
+    /*Cambiar de fuente*/
+    text-align: center;
+  }
+}
+.animations-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  .animation-element {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-container-lowest);
+    color: var(--on-surface-container);
+    gap: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    .animation-header {
+      display: flex;
+      flex-direction: column;
+    }
+    .title,
+    #description {
+      text-align: center;
+    }
+    .title {
+      font-size: 24px;
+    }
+    #description {
+      margin: 0;
+      font-size: 14px;
+      color: var(--on-surface-container-variant);
+    }
+
+    #time-animation {
+      width: 100px;
+      text-align: end;
+      align-self: center;
+      background: transparent;
+      font-size: 30px;
+      border-radius: 999px;
+      border: 1px solid var(--surface-container);
+    }
+    .buttons-animations {
+      width: auto;
+      margin: 0 auto;
+      #copy {
+        background: var(--surface-container);
+        color: var(--on-surface-container);
+      }
+      #play {
+        background: var(--on-surface-container);
+        color: var(--surface-container-lowest);
+        svg {
+          align-self: center;
+          justify-self: center;
+        }
+      }
+      button {
+        padding: 4px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        width: auto;
+        margin: 0 8px;
+
+        transition: scale 0.3s ease;
+      }
+      button:hover {
+        scale: 1.02;
+      }
+      button:active {
+        scale: 0.95;
+      }
+      svg {
+        width: 32px;
+      }
+    }
+  }
+  .animation-element.active {
+    background: var(--success);
+    color: var(--on-success);
+    transition: background 0.3s ease;
+    #description {
+      color: var(--on-success-container);
+    }
+    button {
+      background: var(--success-container) !important;
+      color: var(--on-success-container) !important;
+    }
+    #play {
+      background: var(--on-success-container) !important;
+      color: var(--success-container) !important;
+    }
+  }
+}
+
+/*Botones del filtro de animaciones*/
+.filters-animations-container {
+  position: relative;
+  width: fit-content;
+  #selectedFilter {
+    width: fit-content;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: larger;
+    display: flex;
+    gap: 32px;
+    cursor: pointer;
+    span {
+      transition: all 0.3s ease;
+      color: hsla(0, 1%, 72%, 0.726);
+    }
+  }
+  .filters-list {
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 8px);
+    right: 50%;
+    transform: translate(50%, 0%);
+    visibility: hidden;
+    pointer-events: none;
+    background: var(--surface-container-low);
+    color: var(--on-surface-container);
+
+    ol {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 4px 8px;
+        cursor: pointer;
+        border-bottom: 1px solid var(--surface-container-lowest);
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+      li.active {
+        background: var(--primary);
+        color: var(--on-primary);
+      }
+    }
+  }
+}
+.filters-animations-container.open {
+  #selectedFilter span {
+    transform: rotateZ(180deg);
+  }
+  .filters-list {
+    visibility: visible;
+    pointer-events: all;
+    animation: slideDown 0.3s ease forwards;
+  }
+}
+
+@media (max-width: 900px) {
+  .animation-element {
+    flex-grow: 1;
+  }
+}
