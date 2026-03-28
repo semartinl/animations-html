@@ -1,90 +1,133 @@
 #dropdown-main {
-  width: 80%;
+  width: min(960px, 90%);
   margin: 50px auto;
   display: grid;
-  grid-template-rows: 20px 200px 50px auto;
+  grid-template-rows: auto;
   justify-items: center;
   gap: 32px;
-  height: auto;
   h2 {
     text-align: center;
+    color: var(--text);
   }
 }
 
 .dropdown {
   --animation: slideDown;
   --animation-time: 0.3s;
-  width: 500px;
   position: relative;
-  display: grid;
-  place-content: center;
-  margin: 16px auto 90px auto;
+
+  margin: 16px auto 72px auto;
+
   button {
-    background: var(--secundary);
-    color: var(--on-secundary);
-    width: 200px;
-    border: none;
-    padding: 8px;
+    background: linear-gradient(135deg, var(--primary), #9e8bff);
+    color: var(--on-primary);
+    width: 220px;
+    border: 1px solid rgba(124, 93, 255, 0.35);
+    padding: 12px 14px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    box-shadow: 0 12px 30px rgba(124, 93, 255, 0.35);
+    transition:
+      transform 0.12s ease,
+      box-shadow 0.2s ease;
   }
+  button:hover {
+    /* transform: translateY(-1px); */
+    box-shadow: 0 16px 36px rgba(124, 93, 255, 0.45);
+  }
+
   .dropdown-container {
-    --margin-dropdown: 20px;
-    width: 50%;
-    border: none;
+    --margin-dropdown: 16px;
+    width: 100%;
+    border: 1px solid var(--surface-container-low);
+    border-radius: 14px;
     position: absolute;
-    top: calc(
-      100% + var(--margin-dropdown)
-    ); /* separa del botón sin crear “hueco de hover” */
+    top: calc(100% + var(--margin-dropdown));
     left: 0;
-    transform: translate(50%, 0%);
-    z-index: 10;
+    /* transform: translate(50%, 0); */
+    z-index: 20;
     transition: all 0.3s ease;
     pointer-events: none;
     visibility: hidden;
     interpolate-size: allow-keywords;
     opacity: 0;
-    &::before {
+    background: linear-gradient(
+      135deg,
+      rgba(17, 22, 35, 0.95),
+      rgba(12, 15, 23, 0.9)
+    );
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    /* backdrop-filter: blur(10px); */
+    overflow: hidden;
+
+    &::after {
       content: "";
       position: absolute;
-      top: calc(
-        0% - var(--margin-dropdown)
-      ); /* Cubre el espacio vacío de 10px arriba */
+      top: calc(0% - var(--margin-dropdown));
       left: 0;
       width: 100%;
-      height: var(--margin-dropdown); /*Esto cambiarlo por el tamaño tambien*/
+      height: var(--margin-dropdown);
+      pointer-events: all;
+      border-top: white solid;
+      z-index: 80;
     }
 
     ol {
       list-style: none;
+      margin: 0;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
 
       li {
         width: 100%;
-        padding: 8px;
-        border-bottom: 1px solid;
-        &:hover {
-          background: var(--primary);
+        padding: 8px 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 10px;
+        transition:
+          background 0.18s ease,
+          color 0.18s ease,
+          border-color 0.18s ease;
+        &:hover,
+        &:focus-within,
+        &:active {
+          background: linear-gradient(
+            135deg,
+            rgba(124, 93, 255, 0.35),
+            rgba(62, 214, 176, 0.22)
+          );
+          border-color: rgba(124, 93, 255, 0.8);
           a {
-            color: var(--on-primary);
+            color: white;
           }
         }
       }
       li:last-child {
-        margin-bottom: none;
+        border-bottom: none;
       }
       a {
         width: 100%;
+        display: block;
         text-decoration: none;
         color: var(--on-surface-container);
+        font-weight: 500;
+        &:focus-visible {
+          outline: 2px solid rgba(124, 93, 255, 0.8);
+          outline-offset: 2px;
+          color: var(--on-primary);
+          background: rgba(124, 93, 255, 0.18);
+          border-radius: 8px;
+        }
       }
     }
   }
-  button:hover + .dropdown-container,
-  button:focus + .dropdown-container,
-  .dropdown-container:hover {
-    visibility: visible;
-    pointer-events: all;
-    background: var(--surface-container-low);
-    animation: var(--animation) var(--animation-time) ease forwards;
-  }
+}
+.dropdown.open .dropdown-container {
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+  animation: var(--animation) var(--animation-time) ease forwards;
 }

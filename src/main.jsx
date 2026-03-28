@@ -6,6 +6,7 @@ import "@/styles/styles.css";
 import "./styles/commons-styles.css";
 import "./styles/Animations/dropdows.css";
 import "./styles/popover.css";
+import "./styles/post-new-animation-page.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

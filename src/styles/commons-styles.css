@@ -1,4 +1,5 @@
 .animations-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -16,11 +17,13 @@
     width: 300px;
     display: flex;
     flex-direction: column;
-    background: var(--surface-container-lowest);
+    background: var(--surface-container);
     color: var(--on-surface-container);
     gap: 16px;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--surface-container-low);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
     .animation-header {
       display: flex;
       flex-direction: column;
@@ -31,6 +34,7 @@
     }
     .title {
       font-size: 24px;
+      letter-spacing: -0.02em;
     }
     #description {
       margin: 0;
@@ -45,27 +49,33 @@
       background: transparent;
       font-size: 30px;
       border-radius: 999px;
-      border: 1px solid var(--surface-container);
+      border: 1px solid var(--surface-container-low);
+      color: var(--on-surface-container);
     }
     .buttons-animations {
       width: auto;
       margin: 0 auto;
       #copy {
-        background: var(--surface-container);
+        background: var(--surface-container-high);
         color: var(--on-surface-container);
+        svg {
+          width: 32px;
+          align-self: center;
+          justify-self: center;
+        }
       }
       #play {
-        background: var(--on-surface-container);
-        color: var(--surface-container-lowest);
+        background: var(--primary);
+        color: var(--on-primary);
         svg {
           align-self: center;
           justify-self: center;
         }
       }
       button {
-        padding: 4px;
-        border: none;
-        border-radius: 50%;
+        padding: 6px;
+        border: 1px solid var(--surface-container-low);
+        border-radius: 12px;
         cursor: pointer;
         width: auto;
         margin: 0 8px;
@@ -74,6 +84,7 @@
       }
       button:hover {
         scale: 1.02;
+        border-color: var(--primary);
       }
       button:active {
         scale: 0.95;
@@ -88,7 +99,7 @@
     color: var(--on-success);
     transition: background 0.3s ease;
     #description {
-      color: var(--on-success-container);
+      color: var(--on-success);
     }
     button {
       background: var(--success-container) !important;
@@ -107,7 +118,7 @@
 
   #selectedFilter {
     width: 150px;
-    background: black;
+    background: gray;
     color: white;
     border: none;
     border-radius: 8px;

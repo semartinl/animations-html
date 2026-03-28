@@ -5,7 +5,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideDown",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Cae desde arriba con transición suave.",
     "keyframes": "@keyframes slideDown {\n  from { opacity: 0; translate: 0 -20px; }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -14,7 +14,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideUp",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Sube suave desde abajo.",
     "keyframes": "@keyframes slideUp {\n  from { opacity: 0; translate: 0 20px; }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -23,7 +23,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideLeft",
-    "description": "Se desliza suavemente desde la izquierda.",
+    "description": "Entra desde la izquierda con deslizamiento limpio.",
     "keyframes": "@keyframes slideLeft {\n  from { opacity: 0; translate: -30px 0px; }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -32,7 +32,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideRight",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Entra desde la derecha con deslizamiento limpio.",
     "keyframes": "@keyframes slideRight {\n  from { opacity: 0; translate: 30px 0px; }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -41,7 +41,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideDownRebount",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Baja con rebote final controlado.",
     "keyframes": "@keyframes slideDownRebount {\n  from { opacity: 0; translate: 0 -20px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -50,7 +50,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideUpRebount",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Sube con rebote elástico y cierre suave.",
     "keyframes": "@keyframes slideUpRebount {\n  from { opacity: 0; translate: 0 20px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -59,7 +59,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideLeftRebount",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Llega desde la izquierda con rebote sutil.",
     "keyframes": "@keyframes slideLeftRebount {\n  from { opacity: 0; translate: -30px 0px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -68,7 +68,7 @@
     "category": "dropdown",
     "type": "Entrada",
     "cssValue": "slideRightRebount",
-    "description": "Cae suavemente desde arriba.",
+    "description": "Entra por la derecha con rebote enérgico.",
     "keyframes": "@keyframes slideRightRebount {\n  from { opacity: 0; translate: 30px 0px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
   },
   {
@@ -77,7 +77,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popIn",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Burbuja rápida con rebote central.",
     "keyframes": "@keyframes popIn {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -86,7 +86,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInSlideBottom",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Burbuja que sube desde abajo con pequeño rebote.",
     "keyframes": "@keyframes popInSlideBottom {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -95,7 +95,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInSlideTop",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Burbuja que baja desde arriba con rebote suave.",
     "keyframes": "@keyframes popInSlideTop {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -104,7 +104,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInSlideRight",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Burbuja que entra por la derecha y rebota.",
     "keyframes": "@keyframes popInSlideRight {\n  0% { opacity: 0; transform: scale(0.8) translate(100%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -113,7 +113,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInSlideLeft",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Burbuja que entra por la izquierda y rebota.",
     "keyframes": "@keyframes popInSlideLeft {\n  0% { opacity: 0; transform: scale(0.8) translate(0%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -122,7 +122,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInTop",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Surge desde arriba con pop suave.",
     "keyframes": "@keyframes popInTop {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -131,7 +131,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInTopSlideRight",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Asoma arriba y se desliza a la derecha con pop.",
     "keyframes": "@keyframes popInTopSlideRight {\n  0% { opacity: 0; transform: scale(0.8) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -140,7 +140,7 @@
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInTopSlideLeft",
-    "description": "Aparece con un pequeño rebote desde la esquina izquierda.",
+    "description": "Asoma arriba y se desliza a la izquierda con pop.",
     "keyframes": "@keyframes popInTopSlideLeft {\n  0% { opacity: 0; transform: scale(0.8) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
@@ -149,7 +149,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "flipOpen",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Abre girando en 3D sobre el eje X como una tapa.",
     "keyframes": "@keyframes flipOpen {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
   },
   {
@@ -158,7 +158,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "flipOpenSlideRight",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Giro 3D abriendo hacia la derecha.",
     "keyframes": "@keyframes flipOpenSlideRight {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
   },
   {
@@ -167,7 +167,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "flipOpenSlideLeft",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Giro 3D abriendo hacia la izquierda.",
     "keyframes": "@keyframes flipOpenSlideLeft {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
   },
   {
@@ -176,7 +176,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "flipOpenSlideUp",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Gira desde abajo hacia arriba en perspectiva 3D.",
     "keyframes": "@keyframes flipOpenSlideUp {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
   },
   {
@@ -185,7 +185,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "flipOpenSlideDown",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Gira hacia abajo desde la parte superior en 3D.",
     "keyframes": "@keyframes flipOpenSlideDown {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
   },
   {
@@ -194,7 +194,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "reveal",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Revela el contenido con un clip ascendente.",
     "keyframes": "@keyframes reveal {\n  0% { clip-path: inset(0 0 100% 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
   },
   {
@@ -203,7 +203,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "revealBottom",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Descubre el contenido subiendo desde abajo.",
     "keyframes": "@keyframes revealBottom {\n  0% { clip-path: inset(100% 0 0 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
   },
   {
@@ -212,7 +212,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "appearFromBottomLeft",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Aparece desde la esquina inferior izquierda con máscara.",
     "keyframes": "@keyframes appearFromBottomLeft {\n  0% { opacity: 0; clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
   },
   {
@@ -221,7 +221,7 @@
     "category": "dropdown",
     "type": "Moderno",
     "cssValue": "softBlur",
-    "description": "Efecto de rotación sobre el eje X.",
+    "description": "Se desenfoca al inicio y termina nítido al aparecer.",
     "keyframes": "@keyframes softBlur {\n  0% { opacity: 1; filter: blur(10px); }\n  100% { opacity: 1; filter: blur(0); }\n}"
   }
 ]

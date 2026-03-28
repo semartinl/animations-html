@@ -11,6 +11,7 @@ import DropdownIcon from "../../../public/icons/DropdownIcon";
 import PopoverIcon from "../../../public/icons/PopoverIcon";
 import ToastIcon from "../../../public/icons/ToastIcon";
 import DarkModeIcon from "../../../public/icons/DarkModeIcon";
+import NavItemProx from "./NavItemProx";
 
 export default function SideBar() {
   const toggleMenuButton = useRef(null);
@@ -49,22 +50,29 @@ export default function SideBar() {
       </NavLink>
       <nav className="navSidebar">
         <ul>
-          <NavItem to={"/"} textButton={"Elements"}>
-            <ElementsIcon />
-          </NavItem>
+          {/* <NavItem to={"/"} textButton={"Elements"}>
+              <ElementsIcon />
+            </NavItem> */}
 
-          <NavItem to={"/headers"} textButton={"Headers"}>
-            <HeaderIcon />
-          </NavItem>
           <NavItem to={"/dropdowns"} textButton={"Dropdowns"}>
             <DropdownIcon />
           </NavItem>
-          <NavItem to={"/popovers"} textButton={"Popovers"}>
+          <NavItemProx textButton={"Elements"} to={"/elements"}>
+            <ElementsIcon />
+          </NavItemProx>
+
+          <NavItemProx to={"/headers"} textButton={"Headers"}>
+            <HeaderIcon />
+          </NavItemProx>
+          <NavItemProx to={"/popovers"} textButton={"Popovers"}>
             <PopoverIcon />
-          </NavItem>
-          <NavItem to={"/toasts"} textButton={"Toasts"}>
+          </NavItemProx>
+          <NavItemProx to={"/toasts"} textButton={"Toasts"}>
             <ToastIcon />
-          </NavItem>
+          </NavItemProx>
+          <NavItemProx to={"/tabs"} textButton={"Tabs"}>
+            <ToastIcon />
+          </NavItemProx>
         </ul>
       </nav>
       <div className="linea"></div>
@@ -72,7 +80,7 @@ export default function SideBar() {
       <div className="black-mode">
         <div className="info">
           <DarkModeIcon />
-          <span className="sidebarSpan">Black Mode</span>
+          <span className="sidebarSpan">Dark Mode</span>
         </div>
         <div className="switch">
           <label id="toggleSwitch" htmlFor="black-mode">

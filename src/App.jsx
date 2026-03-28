@@ -3,6 +3,7 @@ import SideBar from "./components/Sidebar/SideBar";
 import Home from "./pages/Home";
 import Headers from "./pages/Headers";
 import Dropdowns from "./pages/Dropdowns";
+import PostNewAnimation from "./pages/PostNewAnimation";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/headers" element={<Headers />} />
         <Route path="/dropdowns" element={<Dropdowns />} />
+        <Route path="/new" element={<PostNewAnimation />} />
       </Routes>
     </>
   );

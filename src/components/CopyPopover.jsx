@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CopyIcon from "../../public/icons/CopyIcon";
+import CodeEditor from "./CodeEditor";
 
 export default function CopyPopover({ anim, id = "copy-popover" }) {
   const [copyStatus, setCopyStatus] = useState({ type: "", success: false });
@@ -47,7 +48,7 @@ export default function CopyPopover({ anim, id = "copy-popover" }) {
             </button>
           </div>
           <pre>
-            <code>{cssSnippet}</code>
+            <CodeEditor readOnly={true} code={cssSnippet} />
           </pre>
         </div>
 
@@ -63,7 +64,7 @@ export default function CopyPopover({ anim, id = "copy-popover" }) {
             </button>
           </div>
           <pre>
-            <code>{htmlSnippet}</code>
+            <CodeEditor readOnly={true} code={htmlSnippet} />
           </pre>
         </div>
       </div>

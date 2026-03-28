@@ -6,6 +6,7 @@ import AnimationElementComplex from "../components/AnimationElements/AnimationEl
 import { useAnimations } from "../hooks/useAnimations";
 import CopyPopover from "../components/CopyPopover";
 import CaretDown from "../../public/icons/CaretDown";
+import Dropdown from "../components/Dropdown";
 export default function Dropdowns() {
   const dropdownTarget = useRef();
   const { filteredList, setSelectedType, selectedType, availableTypes } =
@@ -17,33 +18,7 @@ export default function Dropdowns() {
     <main id="dropdown-main">
       <h2>Animaciones para tus dropdowns</h2>
       <div className="muestra-dropdown">
-        <div ref={dropdownTarget} className="dropdown">
-          <button className="dropdown-btn">Haz hover sobre mi</button>
-          <div className="dropdown-container">
-            <ol>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Sostenibilidad
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Coches compartidos
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Pagos
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Sobre nosotros
-                </a>
-              </li>
-            </ol>
-          </div>
-        </div>
+        <Dropdown dropdownTarget={dropdownTarget} />
       </div>
       <div className="filters-animations-container">
         <button
