@@ -104,49 +104,20 @@
 .tabs-container {
   display: inline-flex;
   padding: 4px;
-  background: #0d1018;
+  background: linear-gradient(135deg, gray, rgb(73, 71, 71), black);
   border: 1px solid var(--border);
   border-radius: 999px;
   gap: 6px;
   height: 50px;
-  anchor-name: --container;
   button {
     position: relative;
     color: white !important;
   }
-  button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-  }
-  button:hover::before {
-    anchor-name: --container;
-  }
-  .bubble {
-    --inset-bubble: 3px;
-    position-anchor: --container;
-    position: absolute;
-    border-radius: 999px;
-    top: calc(anchor(top) + var(--inset-bubble));
-    right: calc(anchor(right) + var(--inset-bubble));
-    left: calc(anchor(left) + var(--inset-bubble));
-    bottom: calc(anchor(bottom) + var(--inset-bubble));
 
-    background: gray;
-    z-index: 1;
-    transition: all 0.3s ease;
-  }
   button.active {
-    anchor-name: --active;
-    color: var(--on-secundary);
-  }
-  .bubble.active-tab {
-    --inset-bubble: 5px;
-
+    /* anchor-name: --active; */
     background: var(--secundary) !important;
-    position-anchor: --active !important;
-    z-index: 2;
+    color: var(--on-secundary);
   }
 }
 
