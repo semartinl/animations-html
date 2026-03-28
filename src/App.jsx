@@ -11,7 +11,8 @@ function App() {
       <SideBar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Dropdowns />} />
         <Route path="/headers" element={<Headers />} />
         <Route path="/dropdowns" element={<Dropdowns />} />
         <Route path="/new" element={<PostNewAnimation />} />
