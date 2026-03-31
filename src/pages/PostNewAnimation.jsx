@@ -155,7 +155,7 @@ export default function PostNewAnimation() {
               aria-pressed={element === selectedElement}
               onClick={() => setSelectedElement(element)}
             >
-              {element}
+              {element.charAt(0).toUpperCase() + element.slice(1)}
             </button>
           );
         })}
