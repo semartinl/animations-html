@@ -13,7 +13,7 @@
   --radius: 16px;
 }
 
-#main-playground {
+main#main-playground {
   flex: 1;
   margin: 0 auto;
   padding: 32px 24px 64px;

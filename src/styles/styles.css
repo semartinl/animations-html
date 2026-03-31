@@ -55,4 +55,5 @@ body {
 #root {
   display: flex;
   position: relative;
+  color: var(--text) !important;
 }

@@ -157,3 +157,7 @@ pre {
   transform: translateY(-1px);
   box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.6);
 }
+
+.popup-container {
+  animation: var(--animation) var(--animation-time) ease forwards;
+}
