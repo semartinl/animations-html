@@ -159,5 +159,4 @@ pre {
 }
 
 .popup-container {
-  animation: var(--animation) var(--animation-time) ease forwards;
 }

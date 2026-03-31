@@ -4,8 +4,25 @@ import useHtmlElements from "../hooks/useHtmlElements";
 import Playground from "../components/Playground";
 
 export default function PostNewAnimation() {
-  const { selectedList } = useHtmlElements({ element: "popup" });
-  const [cssValues, setCssValues] = useState("");
+  const {
+    selectedList,
+    setSelectedElement,
+    selectedElement,
+    posiblesElements,
+  } = useHtmlElements({ element: "popup" });
+  const [cssValues, setCssValues] =
+    useState(`@keyframes slideDown { 0% { translate: 0 -100px; } 30% { translate: 0 10px; }
+  50% {
+    translate: 0 -10px;
+  }
+  70% {
+    translate: 0 10px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+`);
   let cssEditor = useRef(null);
   const iframe = useRef(null);
   function createHtml({ html, defaultCss = "", css, js }) {
@@ -53,14 +70,37 @@ export default function PostNewAnimation() {
           --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
           --radius: 16px;
         }
+
         *{margin: 0; padding:0; box-sizing:border-box;}
         body{
         height: 100%;
           display:grid;
           place-content:center;
         }
+                .popup-button {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, #ef4444 55%, transparent);
+  background: color-mix(in srgb, #ef4444 10%, transparent);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 120ms ease;
+}
+
+.popup-button:hover {
+  background: color-mix(in srgb, #ef4444 16%, transparent);
+  border-color: color-mix(in srgb, #ef4444 70%, transparent);
+}
+
+
     ${defaultCss}
-    ${css}</style>
+    ${css}
+    </style>
   </head>
   <body>
   <main>
@@ -71,13 +111,13 @@ export default function PostNewAnimation() {
   </html>
   `;
   }
-  function onChangeCssEditor(value, editorRef) {
+  function onChangeCssEditor(value) {
     setCssValues(value);
     // setTimeout(() => {
     //   editorRef.getAction("editor.action.formatDocument").run();
     // }, 100);
   }
-  useEffect(() => {
+  const updateIframe = () => {
     const html = createHtml({
       html: selectedList[0].htmlValue,
       defaultCss: selectedList[0].cssValue,
@@ -86,7 +126,10 @@ export default function PostNewAnimation() {
     });
     if (!iframe.current) return;
     iframe.current.srcdoc = html;
-  }, [cssValues]);
+  };
+  useEffect(() => {
+    updateIframe();
+  }, [cssValues, selectedElement]);
 
   return (
     <main id="main-playground">
@@ -98,7 +141,25 @@ export default function PostNewAnimation() {
           conocer nuestro sector{" "}
         </p>
       </div>
-
+      <section className="elements-tab" aria-label="Selector de elementos">
+        {posiblesElements.map((element, i) => {
+          return (
+            <button
+              key={i}
+              type="button"
+              className={
+                element === selectedElement
+                  ? "elements-tab__button active"
+                  : "elements-tab__button"
+              }
+              aria-pressed={element === selectedElement}
+              onClick={() => setSelectedElement(element)}
+            >
+              {element}
+            </button>
+          );
+        })}
+      </section>
       <section className="workspace">
         <Playground
           elementJson={selectedList[0]}
