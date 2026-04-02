@@ -1,18 +1,32 @@
-# React + Vite
+# Animaciones HTML (React + Vite)
+Catálogo interactivo de animaciones CSS pensado para componentes de interfaz, empezando por dropdowns. Permite:
+- Previsualizar animaciones sobre un dropdown real.
+- Filtrar por tipos (Entrada, Énfasis, Moderno, etc.).
+- Copiar snippets de CSS/HTML en un clic.
+- Usar un playground con editor para componer y previsualizar una animación propia.
+- Preparado para SPA y despliegue en Vercel.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Demo local rápida
+- Página principal: listado de animaciones de dropdowns con vista previa integrada.
+- Página de creación: playground para editar CSS y publicar una nueva animación.
 
-Currently, two official plugins are available:
+## Requisitos
+- Node.js ≥ 18
+- Git (para clonar)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Clonar y ejecutar en local (Windows)
+```bash
+# 1) Clona el repositorio
+git clone URL_DEL_REPO
+cd animaciones-html
 
-## React Compiler
+# 2) Instala dependencias
+npm install
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+# 3) Arranca el servidor de desarrollo
+npm run dev
+# Abre http://localhost:5173
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 4) (Opcional) Build de producción y preview local
+npm run build
+npm run preview
