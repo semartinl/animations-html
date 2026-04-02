@@ -3,80 +3,95 @@
     opacity: 0;
     translate: 0 -20px;
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideUp {
   from {
     opacity: 0;
     translate: 0 20px;
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideDownRebount {
   from {
     opacity: 0;
     translate: 0 -20px;
     animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03);
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideUpRebount {
   from {
     opacity: 0;
     translate: 0 20px;
     animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03);
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideLeftRebount {
   from {
     opacity: 0;
     translate: 30px 0px;
     animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03);
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideRightRebount {
   from {
     opacity: 0;
     translate: -30px 0px;
     animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03);
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideRight {
   from {
     opacity: 0;
     translate: 30px 0px;
   }
+
   to {
     opacity: 1;
     translate: 0 0;
   }
 }
+
 @keyframes slideLeft {
   from {
     opacity: 0;
     translate: -30px 0px;
   }
+
   to {
     opacity: 1;
     translate: 0 0;
@@ -86,176 +101,253 @@
 @keyframes popIn {
   0% {
     opacity: 0;
-    transform: scale(0.8);
-    transform-origin: bottom;
+    transform: scale(0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 @keyframes popInSlideTop {
   0% {
     opacity: 0;
-    transform: scale(0.8) translate(0%, 50%);
-    transform-origin: bottom;
+    transform: scale(0.5) translate(0%, 50%);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translate(0%, 0%);
   }
 }
+
 @keyframes popInSlideBottom {
   0% {
     opacity: 0;
     transform: scale(0.8) translate(0%, -50%);
-    transform-origin: bottom;
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translate(0%, 0%);
   }
 }
+
 @keyframes popInSlideLeft {
   0% {
     opacity: 0;
     transform: scale(0.8) translate(100%, 0%);
-    transform-origin: bottom;
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translate(0%, 0%);
   }
 }
+
 @keyframes popInSlideRight {
   0% {
     opacity: 0;
     transform: scale(0.8) translate(-100%, 0%);
-    transform-origin: bottom;
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translate(0%, 0%);
   }
 }
+
 @keyframes popInTop {
   0% {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.5);
     transform-origin: top;
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 @keyframes popInTopSlideLeft {
   0% {
     opacity: 0;
-    transform: scale(0.8) translate(100%, 0%);
+    transform: scale(0.5) translate(100%, 0%);
     transform-origin: top;
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translate(0%, 0%);
   }
 }
+
 @keyframes popInTopSlideRight {
   0% {
     opacity: 0;
-    transform: scale(0.8) translate(-100%, 0%);
+    transform: scale(0.5) translate(-100%, 0%);
     transform-origin: top;
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translate(0%, 0%);
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes flipOpen {
   0% {
     transform: perspective(400px) rotateX(-90deg);
     transform-origin: top;
   }
+
   100% {
     opacity: 1;
     transform: perspective(400px) rotateX(0deg);
   }
 }
+
 @keyframes flipOpenSlideLeft {
   0% {
     transform: perspective(400px) rotateX(-90deg) translate(100%, 0%);
     transform-origin: top;
   }
+
   100% {
     opacity: 1;
     transform: perspective(400px) rotateX(0deg) translate(0%, 0%);
   }
 }
+
 @keyframes flipOpenSlideRight {
   0% {
     transform: perspective(400px) rotateX(-90deg) translate(-100%, 0%);
     transform-origin: top;
   }
+
   100% {
     opacity: 1;
     transform: perspective(400px) rotateX(0deg) translate(0%, 0%);
   }
 }
+
 @keyframes flipOpenSlideUp {
   0% {
     transform: perspective(400px) rotateX(-90deg) translate(0%, 50%);
     transform-origin: bottom;
   }
+
   100% {
     opacity: 1;
     transform: perspective(400px) rotateX(0deg) translate(0%, 0%);
   }
 }
+
 @keyframes flipOpenSlideDown {
   0% {
     transform: perspective(400px) rotateX(-90deg) translate(0%, -50%);
     transform-origin: bottom;
   }
+
   100% {
     opacity: 1;
     transform: perspective(400px) rotateX(0deg) translate(0%, 0%);
   }
 }
+
 @keyframes reveal {
   0% {
     height: 0;
   }
+
   100% {
     opacity: 1;
     height: fit-content;
   }
 }
+
 @keyframes revealBottom {
   0% {
     clip-path: inset(100% 0 0 0);
   }
+
   100% {
     opacity: 1;
     clip-path: inset(0 0 0 0);
   }
 }
+
+
+@keyframes appearFromBottomLeft {
+  0% {
+    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes appearFromTopLeft {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes appearFromTopRight {
+  0% {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes appearFromBottomRight {
+  0% {
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes popInCenter {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes softBlur {
   0% {
     opacity: 1;
     filter: blur(10px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
-  }
-}
-@keyframes appearFromBottomLeft {
-  0% {
-    opacity: 0;
-    clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
-  }
-  100% {
-    opacity: 1;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
