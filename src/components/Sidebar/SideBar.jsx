@@ -57,6 +57,9 @@ export default function SideBar() {
           <NavItem to={"/dropdowns"} textButton={"Dropdowns"}>
             <DropdownIcon />
           </NavItem>
+          <NavItem to={"/popups"} textButton={"Popovers"}>
+            <PopoverIcon />
+          </NavItem>
           <NavItemProx textButton={"Elements"} to={"/elements"}>
             <ElementsIcon />
           </NavItemProx>
@@ -64,8 +67,8 @@ export default function SideBar() {
           <NavItemProx to={"/headers"} textButton={"Headers"}>
             <HeaderIcon />
           </NavItemProx>
-          <NavItemProx to={"/popovers"} textButton={"Popovers"}>
-            <PopoverIcon />
+          <NavItemProx to={"/sidebars"} textButton={"Sidebars"}>
+            <HeaderIcon styles={{ transform: "rotateZ(180deg)" }} />
           </NavItemProx>
           <NavItemProx to={"/toasts"} textButton={"Toasts"}>
             <ToastIcon />

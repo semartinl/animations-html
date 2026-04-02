@@ -1,0 +1,17 @@
+@keyframes slideDown {
+  0% {
+    translate: 0 -100px;
+  }
+  30% {
+    translate: 0 10px;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+  70% {
+    translate: 0 10px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}

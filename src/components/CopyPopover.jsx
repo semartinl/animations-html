@@ -8,9 +8,15 @@ export default function CopyPopover({ anim, id = "copy-popover" }) {
   if (!anim) return null;
 
   // Formateamos los snippets
-  const htmlSnippet = `<div class="dropdown">\n  <button>Menu</button>\n  <div class="menu-content">\n    <p>Opción 1</p>\n  </div>\n</div>`;
+  const isPopup = anim?.category === "popup";
 
-  const cssSnippet = `/* Keyframes */\n${anim.keyframes}\n\n/* Aplicación */\n.dropdown button:hover + .menu-content {\n  animation: ${anim.cssValue} 0.4s ease-out forwards;\n}`;
+  const htmlSnippet = isPopup
+    ? `<button popovertarget="popup">Eliminar cuenta</button>\n<section id="popup" popover="manual">\n  <h4>¿Seguro que deseas eliminar la cuenta?</h4>\n  <button popovertarget="popup">Cancelar</button>\n  <button>Eliminar</button>\n</section>`
+    : `<div class="dropdown">\n  <button>Menu</button>\n  <div class="menu-content">\n    <p>Opción 1</p>\n  </div>\n</div>`;
+
+  const cssSnippet = isPopup
+    ? `/* Keyframes */\n${anim.keyframes}\n\n/* Aplicación Popup */\n#popup {\n  --animation: ${anim.cssValue};\n  --animation-time: 0.3s;\n}\n#popup:popover-open {\n  animation: var(--animation) var(--animation-time) ease forwards;\n}\n#popup::backdrop {\n  backdrop-filter: blur(5px);\n}`
+    : `/* Keyframes */\n${anim.keyframes}\n\n/* Aplicación */\n.dropdown button:hover + .menu-content {\n  animation: ${anim.cssValue} 0.4s ease-out forwards;\n}`;
 
   const handleCopy = async (text, type) => {
     try {
@@ -23,13 +29,13 @@ export default function CopyPopover({ anim, id = "copy-popover" }) {
   };
 
   return (
-    <div popover="auto" id="copy-popover" className="code-popover">
+    <div popover="auto" id={id} className="code-popover">
       <div className="popover-header">
         <h3>Snippet: {anim.name}</h3>
         {/* Botón de cierre manual opcional (la tecla ESC ya funciona por defecto) */}
         <button
           className="close-icon"
-          onClick={() => document.getElementById("copy-popover").hidePopover()}
+          onClick={() => document.getElementById(id).hidePopover()}
         >
           &times;
         </button>
@@ -48,7 +54,7 @@ export default function CopyPopover({ anim, id = "copy-popover" }) {
             </button>
           </div>
           <pre>
-            <CodeEditor readOnly={true} code={cssSnippet} />
+            <CodeEditor readOnly={true} language="css" code={cssSnippet} />
           </pre>
         </div>
 
@@ -64,7 +70,7 @@ export default function CopyPopover({ anim, id = "copy-popover" }) {
             </button>
           </div>
           <pre>
-            <CodeEditor readOnly={true} code={htmlSnippet} />
+            <CodeEditor readOnly={true} language="html" code={htmlSnippet} />
           </pre>
         </div>
       </div>
