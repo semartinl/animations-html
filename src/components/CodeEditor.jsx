@@ -40,7 +40,6 @@ export default function CodeEditor({
           fontSize: 14,
           fontFamily: "'Fira Code', monospace", // Fuente de programador
           domReadOnly: true,
-          scrollBeyondLastLine: false,
           automaticLayout: true, // Ajusta el tamaño si el contenedor cambia
           formatOnPaste: true,
           formatOnType: true,

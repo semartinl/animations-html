@@ -77,13 +77,7 @@ export default function PostNewAnimation() {
           display:grid;
           place-content:center;
         }
-
-
-
-    ${defaultCss}
-    ${css}
-
-                    button.popup-button {
+                    button.btn {
   appearance: none;
   border: 1px solid color-mix(in srgb, #ef4444 55%, transparent);
   background: color-mix(in srgb, #ef4444 10%, transparent) !important;
@@ -98,10 +92,16 @@ export default function PostNewAnimation() {
     transform 120ms ease;
 }
 
-.popup-button:hover {
+button.btn:hover {
   background: color-mix(in srgb, #ef4444 16%, transparent);
   border-color: color-mix(in srgb, #ef4444 70%, transparent);
 }
+
+
+    ${defaultCss}
+    ${css}
+
+
     </style>
   </head>
   <body>
