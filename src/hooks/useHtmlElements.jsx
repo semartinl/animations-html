@@ -8,9 +8,15 @@ export default function useHtmlElements({ element = "dropdown" }) {
     const el = elementosHtml.filter((el) => el.element === selectedElement);
     return el;
   }, [selectedElement, elementosHtml]);
+
+  const posiblesElements = useMemo(() => {
+    const uniqueElements = [...new Set(elementosHtml.map((el) => el.element))];
+    return uniqueElements;
+  }, [elementosHtml]);
   return {
     selectedList,
     setSelectedElement,
     selectedElement,
+    posiblesElements,
   };
 }

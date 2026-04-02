@@ -5,6 +5,8 @@ export default function CodeEditor({
   language = "css",
   onChange,
   readOnly = false,
+  className = "",
+  containerStyle,
 }) {
   const editorRef = useRef(null);
   function handleMount(editor, monaco) {
@@ -16,17 +18,17 @@ export default function CodeEditor({
   }
   return (
     <div
-      className="editor-container"
+      className={`editor-container ${className}`.trim()}
       style={{
-        height: "300px",
+        height: "100%",
         borderRadius: "8px",
         overflow: "hidden",
+        ...containerStyle,
       }}
     >
       <Editor
         height="100%"
         width="100%"
-        
         language={language}
         theme="vs-dark" // Puedes usar "light" o "vs-dark"
         value={code}

@@ -73,6 +73,15 @@
   },
   {
     "id": "pop-in",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Énfasis",
+    "cssValue": "popInCenter",
+    "description": "Aparece con escala desde el centro",
+    "keyframes": "@keyframes scaleCenter {\n  0% {  transform: scale(0.5); }\n  100% { transform: scale(1); }\n}"
+  },
+  {
+    "id": "fade-in-pop-in",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -81,7 +90,7 @@
     "keyframes": "@keyframes popIn {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-slide-bottom",
+    "id": "fade-in-pop-in-slide-bottom",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -90,7 +99,7 @@
     "keyframes": "@keyframes popInSlideBottom {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-slide-top",
+    "id": "fade-in-pop-in-slide-top",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -99,7 +108,7 @@
     "keyframes": "@keyframes popInSlideTop {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-slide-right",
+    "id": "fade-in-pop-in-slide-right",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -108,7 +117,7 @@
     "keyframes": "@keyframes popInSlideRight {\n  0% { opacity: 0; transform: scale(0.8) translate(100%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-slide-left",
+    "id": "fade-in-pop-in-slide-left",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -117,7 +126,7 @@
     "keyframes": "@keyframes popInSlideLeft {\n  0% { opacity: 0; transform: scale(0.8) translate(0%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-top",
+    "id": "fade-in-pop-in-top",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -126,7 +135,7 @@
     "keyframes": "@keyframes popInTop {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-top-slide-right",
+    "id": "fade-in-pop-in-top-slide-right",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
@@ -135,13 +144,22 @@
     "keyframes": "@keyframes popInTopSlideRight {\n  0% { opacity: 0; transform: scale(0.8) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
   },
   {
-    "id": "pop-in-top-slide-left",
+    "id": "fade-in-pop-in-top-slide-left",
     "name": "Burbuja",
     "category": "dropdown",
     "type": "Énfasis",
     "cssValue": "popInTopSlideLeft",
     "description": "Asoma arriba y se desliza a la izquierda con pop.",
     "keyframes": "@keyframes popInTopSlideLeft {\n  0% { opacity: 0; transform: scale(0.8) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "fade-in",
+    "name": "Burbuja",
+    "category": "dropdown",
+    "type": "Énfasis",
+    "cssValue": "fadeIn",
+    "description": "Asoma arriba y se desliza a la izquierda con pop.",
+    "keyframes": "@keyframes fadeIn {\n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}"
   },
   {
     "id": "flip",
@@ -192,7 +210,7 @@
     "id": "reveal",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "Reveal",
     "cssValue": "reveal",
     "description": "Revela el contenido con un clip ascendente.",
     "keyframes": "@keyframes reveal {\n  0% { clip-path: inset(0 0 100% 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
@@ -201,7 +219,7 @@
     "id": "reveal-bottom",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "Reveal",
     "cssValue": "revealBottom",
     "description": "Descubre el contenido subiendo desde abajo.",
     "keyframes": "@keyframes revealBottom {\n  0% { clip-path: inset(100% 0 0 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
@@ -210,6 +228,267 @@
     "id": "reveal-from-bottom-left",
     "name": "Giro 3D",
     "category": "dropdown",
+    "type": "Reveal",
+    "cssValue": "appearFromBottomLeft",
+    "description": "Aparece desde la esquina inferior izquierda con máscara.",
+    "keyframes": "@keyframes appearFromBottomLeft {\n  0% { opacity: 0; clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "reveal-from-bottom-right",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Reveal",
+    "cssValue": "appearFromBottomRight",
+    "description": "Aparece desde la esquina inferior derecha con máscara.",
+    "keyframes": "@keyframes appearFromBottomRight {\n  0% { opacity: 0; clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "reveal-from-top-left",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Reveal",
+    "cssValue": "appearFromTopLeft",
+    "description": "Aparece desde la esquina superior izquierda con máscara.",
+    "keyframes": "@keyframes appearFromTopLeft {\n  0% { opacity: 0; clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "reveal-from-top-right",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Reveal",
+    "cssValue": "appearFromTopRight",
+    "description": "Aparece desde la esquina superior derecha con máscara.",
+    "keyframes": "@keyframes appearFromTopRight {\n  0% { opacity: 0; clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "soft-blur",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Moderno",
+    "cssValue": "softBlur",
+    "description": "Se desenfoca al inicio y termina nítido al aparecer.",
+    "keyframes": "@keyframes softBlur {\n  0% { opacity: 1; filter: blur(10px); }\n  100% { opacity: 1; filter: blur(0); }\n}"
+  },
+  {
+    "id": "slide-down",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideDown",
+    "description": "Cae desde arriba con transición suave.",
+    "keyframes": "@keyframes slideDown {\n  from { opacity: 0; translate: 0 -20px; }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-up",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideUp",
+    "description": "Sube suave desde abajo.",
+    "keyframes": "@keyframes slideUp {\n  from { opacity: 0; translate: 0 20px; }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-left",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideLeft",
+    "description": "Entra desde la izquierda con deslizamiento limpio.",
+    "keyframes": "@keyframes slideLeft {\n  from { opacity: 0; translate: -30px 0px; }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-right",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideRight",
+    "description": "Entra desde la derecha con deslizamiento limpio.",
+    "keyframes": "@keyframes slideRight {\n  from { opacity: 0; translate: 30px 0px; }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-down-robount",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideDownRebount",
+    "description": "Baja con rebote final controlado.",
+    "keyframes": "@keyframes slideDownRebount {\n  from { opacity: 0; translate: 0 -20px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-up-rebount",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideUpRebount",
+    "description": "Sube con rebote elástico y cierre suave.",
+    "keyframes": "@keyframes slideUpRebount {\n  from { opacity: 0; translate: 0 20px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-left-rebount",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideLeftRebount",
+    "description": "Llega desde la izquierda con rebote sutil.",
+    "keyframes": "@keyframes slideLeftRebount {\n  from { opacity: 0; translate: -30px 0px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "slide-right-rebount",
+    "name": "Deslizamiento",
+    "category": "popup",
+    "type": "Entrada",
+    "cssValue": "slideRightRebount",
+    "description": "Entra por la derecha con rebote enérgico.",
+    "keyframes": "@keyframes slideRightRebount {\n  from { opacity: 0; translate: 30px 0px; animation-timing-function: cubic-bezier(0.56, -0.07, 0.78, 2.03); }\n  to { opacity: 1; translate: 0 0; }\n}"
+  },
+  {
+    "id": "fade-in",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "fadeIn",
+    "description": "Asoma arriba y se desliza a la izquierda con pop.",
+    "keyframes": "@keyframes fadeIn {\n  0% { opacity: 0; }\n  100% { opacity: 1; }\n}"
+  },
+  {
+    "id": "pop-in",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popIn",
+    "description": "Burbuja rápida con rebote central.",
+    "keyframes": "@keyframes popIn {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-slide-bottom",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInSlideBottom",
+    "description": "Burbuja que sube desde abajo con pequeño rebote.",
+    "keyframes": "@keyframes popInSlideBottom {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-slide-top",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInSlideTop",
+    "description": "Burbuja que baja desde arriba con rebote suave.",
+    "keyframes": "@keyframes popInSlideTop {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-slide-right",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInSlideRight",
+    "description": "Burbuja que entra por la derecha y rebota.",
+    "keyframes": "@keyframes popInSlideRight {\n  0% { opacity: 0; transform: scale(0.8) translate(100%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-slide-left",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInSlideLeft",
+    "description": "Burbuja que entra por la izquierda y rebota.",
+    "keyframes": "@keyframes popInSlideLeft {\n  0% { opacity: 0; transform: scale(0.8) translate(0%, 0%); transform-origin: bottom; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-top",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInTop",
+    "description": "Surge desde arriba con pop suave.",
+    "keyframes": "@keyframes popInTop {\n  0% { opacity: 0; transform: scale(0.8) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-top-slide-right",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInTopSlideRight",
+    "description": "Asoma arriba y se desliza a la derecha con pop.",
+    "keyframes": "@keyframes popInTopSlideRight {\n  0% { opacity: 0; transform: scale(0.8) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "pop-in-top-slide-left",
+    "name": "Burbuja",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "popInTopSlideLeft",
+    "description": "Asoma arriba y se desliza a la izquierda con pop.",
+    "keyframes": "@keyframes popInTopSlideLeft {\n  0% { opacity: 0; transform: scale(0.8) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: scale(1) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "flip",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "flipOpen",
+    "description": "Abre girando en 3D sobre el eje X como una tapa.",
+    "keyframes": "@keyframes flipOpen {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "flip-slide-right",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "flipOpenSlideRight",
+    "description": "Giro 3D abriendo hacia la derecha.",
+    "keyframes": "@keyframes flipOpenSlideRight {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "flip-slide-left",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "flipOpenSlideLeft",
+    "description": "Giro 3D abriendo hacia la izquierda.",
+    "keyframes": "@keyframes flipOpenSlideLeft {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "flip-slide-up",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "flipOpenSlideUp",
+    "description": "Gira desde abajo hacia arriba en perspectiva 3D.",
+    "keyframes": "@keyframes flipOpenSlideUp {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "flip-slide-down",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "flipOpenSlideDown",
+    "description": "Gira hacia abajo desde la parte superior en 3D.",
+    "keyframes": "@keyframes flipOpenSlideDown {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
+  },
+  {
+    "id": "reveal",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "reveal",
+    "description": "Revela el contenido con un clip ascendente.",
+    "keyframes": "@keyframes reveal {\n  0% { clip-path: inset(0 0 100% 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
+  },
+  {
+    "id": "reveal-bottom",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Moderno",
+    "cssValue": "revealBottom",
+    "description": "Descubre el contenido subiendo desde abajo.",
+    "keyframes": "@keyframes revealBottom {\n  0% { clip-path: inset(100% 0 0 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
+  },
+  {
+    "id": "reveal-from-bottom-left",
+    "name": "Giro 3D",
+    "category": "popup",
     "type": "Moderno",
     "cssValue": "appearFromBottomLeft",
     "description": "Aparece desde la esquina inferior izquierda con máscara.",
@@ -218,7 +497,7 @@
   {
     "id": "soft-blur",
     "name": "Giro 3D",
-    "category": "dropdown",
+    "category": "popup",
     "type": "Moderno",
     "cssValue": "softBlur",
     "description": "Se desenfoca al inicio y termina nítido al aparecer.",

@@ -1,24 +1,24 @@
 import React, { useRef, useState } from "react";
-import "@/styles/dropdowns.css";
-
-import AnimationElementComplex from "../components/AnimationElements/AnimationElementComplex";
 import { useAnimations } from "../hooks/useAnimations";
-import CopyPopover from "../components/CopyPopover";
-import Dropdown from "../components/Dropdown";
 import FilterAnimations from "../components/FilterAnimations";
 import ListAnimationElementComplex from "../components/AnimationElements/ListAnimationElementComplex";
-export default function Dropdowns() {
-  const dropdownTarget = useRef();
+import CopyPopover from "../components/CopyPopover";
+import styles from "@/styles/popup-page.module.css";
+import Popup from "../components/Popup";
+
+export default function Popups() {
+  const popupTarget = useRef();
   const { filteredList, setSelectedType, selectedType, availableTypes } =
     useAnimations({
-      initialCategory: "dropdown",
+      initialCategory: "popup",
     });
   const [selectedAnim, setSelectedAnim] = useState(null);
+
   return (
-    <main id="main">
-      <h2>Animaciones para tus dropdowns</h2>
-      <div className="muestra-dropdown">
-        <Dropdown dropdownTarget={dropdownTarget} />
+    <main id={`${styles["main-popup"]}`}>
+      <h2>Animaciones para tus popups</h2>
+      <div className="muestra-popup">
+        <Popup popupTarget={popupTarget} />
       </div>
       <FilterAnimations
         selectedType={selectedType}
@@ -28,7 +28,7 @@ export default function Dropdowns() {
 
       <section className="animations-container">
         <ListAnimationElementComplex
-          target={dropdownTarget}
+          target={popupTarget}
           filteredList={filteredList}
           setSelectedAnim={setSelectedAnim}
         />
