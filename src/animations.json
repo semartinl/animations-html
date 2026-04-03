@@ -165,7 +165,7 @@
     "id": "flip",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpen",
     "description": "Abre girando en 3D sobre el eje X como una tapa.",
     "keyframes": "@keyframes flipOpen {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -174,7 +174,7 @@
     "id": "flip-slide-right",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideRight",
     "description": "Giro 3D abriendo hacia la derecha.",
     "keyframes": "@keyframes flipOpenSlideRight {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -183,7 +183,7 @@
     "id": "flip-slide-left",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideLeft",
     "description": "Giro 3D abriendo hacia la izquierda.",
     "keyframes": "@keyframes flipOpenSlideLeft {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -192,7 +192,7 @@
     "id": "flip-slide-up",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideUp",
     "description": "Gira desde abajo hacia arriba en perspectiva 3D.",
     "keyframes": "@keyframes flipOpenSlideUp {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -201,7 +201,7 @@
     "id": "flip-slide-down",
     "name": "Giro 3D",
     "category": "dropdown",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideDown",
     "description": "Gira hacia abajo desde la parte superior en 3D.",
     "keyframes": "@keyframes flipOpenSlideDown {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -268,6 +268,42 @@
     "cssValue": "softBlur",
     "description": "Se desenfoca al inicio y termina nítido al aparecer.",
     "keyframes": "@keyframes softBlur {\n  0% { opacity: 1; filter: blur(10px); }\n  100% { opacity: 1; filter: blur(0); }\n}"
+  },
+  {
+    "id": "brightness-fade",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Énfasis",
+    "cssValue": "brightnessFade",
+    "description": "Aumenta gradualmente el brillo del contenido, pasando de tenue a iluminado.",
+    "keyframes": "@keyframes brightnessFade {\n  0% {filter: brightness(0.5); }\n  100% { filter: brightness(1); }\n}"
+  },
+  {
+    "id": "brightness-fade",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "brightnessFade",
+    "description": "Aumenta gradualmente el brillo del contenido, pasando de tenue a iluminado.",
+    "keyframes": "@keyframes brightnessFade {\n  0% {filter: brightness(0.5); }\n  100% { filter: brightness(1); }\n}"
+  },
+  {
+    "id": "comic-entry",
+    "name": "Giro 3D",
+    "category": "dropdown",
+    "type": "Énfasis",
+    "cssValue": "comicEntry",
+    "description": "Se desenfoca al inicio y termina nítido al aparecer.",
+    "keyframes": "@keyframes comicEntry {\n  0% { transform: rotateZ(1000deg) scale(0.2); }\n  100% { transform: rotateZ(0deg) scale(1); }\n}"
+  },
+  {
+    "id": "comic-entry",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Énfasis",
+    "cssValue": "comicEntry",
+    "description": "Se desenfoca al inicio y termina nítido al aparecer.",
+    "keyframes": "@keyframes comicEntry {\n  0% { transform: rotateZ(1000deg) scale(0.2); }\n  100% { transform: rotateZ(0deg) scale(1); }\n}"
   },
   {
     "id": "slide-down",
@@ -426,7 +462,7 @@
     "id": "flip",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpen",
     "description": "Abre girando en 3D sobre el eje X como una tapa.",
     "keyframes": "@keyframes flipOpen {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -435,7 +471,7 @@
     "id": "flip-slide-right",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideRight",
     "description": "Giro 3D abriendo hacia la derecha.",
     "keyframes": "@keyframes flipOpenSlideRight {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -444,7 +480,7 @@
     "id": "flip-slide-left",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideLeft",
     "description": "Giro 3D abriendo hacia la izquierda.",
     "keyframes": "@keyframes flipOpenSlideLeft {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -453,7 +489,7 @@
     "id": "flip-slide-up",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideUp",
     "description": "Gira desde abajo hacia arriba en perspectiva 3D.",
     "keyframes": "@keyframes flipOpenSlideUp {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -462,7 +498,7 @@
     "id": "flip-slide-down",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideDown",
     "description": "Gira hacia abajo desde la parte superior en 3D.",
     "keyframes": "@keyframes flipOpenSlideDown {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -471,7 +507,7 @@
     "id": "reveal",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "Reveal",
     "cssValue": "reveal",
     "description": "Revela el contenido con un clip ascendente.",
     "keyframes": "@keyframes reveal {\n  0% { clip-path: inset(0 0 100% 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
@@ -480,7 +516,7 @@
     "id": "reveal-bottom",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "Reveal",
     "cssValue": "revealBottom",
     "description": "Descubre el contenido subiendo desde abajo.",
     "keyframes": "@keyframes revealBottom {\n  0% { clip-path: inset(100% 0 0 0); }\n  100% { opacity: 1; clip-path: inset(0 0 0 0); }\n}"
@@ -489,10 +525,37 @@
     "id": "reveal-from-bottom-left",
     "name": "Giro 3D",
     "category": "popup",
-    "type": "Moderno",
+    "type": "Reveal",
     "cssValue": "appearFromBottomLeft",
     "description": "Aparece desde la esquina inferior izquierda con máscara.",
     "keyframes": "@keyframes appearFromBottomLeft {\n  0% { opacity: 0; clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "reveal-from-top-right",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Reveal",
+    "cssValue": "appearFromTopRight",
+    "description": "Aparece desde la esquina superior derecha con máscara.",
+    "keyframes": "@keyframes appearFromTopRight {\n  0% { opacity: 0; clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "reveal-from-bottom-right",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Reveal",
+    "cssValue": "appearFromBottomRight",
+    "description": "Aparece desde la esquina inferior derecha con máscara.",
+    "keyframes": "@keyframes appearFromBottomRight {\n  0% { opacity: 0; clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
+  },
+  {
+    "id": "reveal-from-top-left",
+    "name": "Giro 3D",
+    "category": "popup",
+    "type": "Reveal",
+    "cssValue": "appearFromTopLeft",
+    "description": "Aparece desde la esquina superior izquierda con máscara.",
+    "keyframes": "@keyframes appearFromTopLeft {\n  0% { opacity: 0; clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%); }\n  100% { opacity: 1; clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); }\n}"
   },
   {
     "id": "soft-blur",

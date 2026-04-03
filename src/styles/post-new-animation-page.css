@@ -26,16 +26,12 @@ main#main-playground {
     -apple-system,
     sans-serif;
   background:
-    radial-gradient(
-      circle at 20% 20%,
+    radial-gradient(circle at 20% 20%,
       rgba(124, 93, 255, 0.08),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 85% 10%,
+      transparent 35%),
+    radial-gradient(circle at 85% 10%,
       rgba(62, 214, 176, 0.08),
-      transparent 32%
-    ),
+      transparent 32%),
     var(--bg);
 }
 
@@ -62,11 +58,9 @@ main#main-playground {
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: linear-gradient(
-    135deg,
-    rgba(124, 93, 255, 0.12),
-    rgba(62, 214, 176, 0.08)
-  );
+  background: linear-gradient(135deg,
+      rgba(124, 93, 255, 0.12),
+      rgba(62, 214, 176, 0.08));
   box-shadow: var(--shadow);
 }
 
@@ -80,11 +74,9 @@ main#main-playground {
   justify-content: center;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(17, 19, 27, 0.9),
-    rgba(11, 12, 16, 0.95)
-  );
+  background: linear-gradient(135deg,
+      rgba(17, 19, 27, 0.9),
+      rgba(11, 12, 16, 0.95));
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
 
@@ -111,11 +103,9 @@ main#main-playground {
   transform: translateY(-1px);
   color: var(--text);
   border-color: rgba(124, 93, 255, 0.5);
-  background: linear-gradient(
-    135deg,
-    rgba(124, 93, 255, 0.18),
-    rgba(62, 214, 176, 0.12)
-  );
+  background: linear-gradient(135deg,
+      rgba(124, 93, 255, 0.18),
+      rgba(62, 214, 176, 0.12));
 }
 
 .elements-tab__button:focus-visible {
@@ -180,6 +170,7 @@ main#main-playground {
   border-radius: 999px;
   gap: 6px;
   height: 100%;
+
   button {
     position: relative;
     color: white !important;
@@ -188,7 +179,7 @@ main#main-playground {
   button.active {
     /* anchor-name: --active; */
     background: var(--secundary) !important;
-    color: var(--on-secundary);
+    color: var(--on-secundary) !important;
   }
 }
 
@@ -241,6 +232,7 @@ main#main-playground {
   display: grid;
   place-items: center;
   transition: all 0.2s ease;
+
   svg {
     width: 32px;
   }
@@ -264,11 +256,9 @@ main#main-playground {
   height: 100%;
   background:
     radial-gradient(circle at 50% 0%, rgba(124, 93, 255, 0.1), transparent 40%),
-    radial-gradient(
-      circle at 10% 20%,
+    radial-gradient(circle at 10% 20%,
       rgba(62, 214, 176, 0.08),
-      transparent 35%
-    ),
+      transparent 35%),
     #0d1018;
 }
 
@@ -285,11 +275,9 @@ iframe#new-iframe-publication {
 .editor-panel {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: linear-gradient(
-    135deg,
-    rgba(19, 22, 35, 0.9),
-    rgba(16, 18, 28, 0.95)
-  );
+  background: linear-gradient(135deg,
+      rgba(19, 22, 35, 0.9),
+      rgba(16, 18, 28, 0.95));
   box-shadow: var(--shadow);
   overflow: hidden;
   height: 100%;
