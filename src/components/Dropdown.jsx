@@ -2,34 +2,14 @@ import React, { useState } from "react";
 
 export default function Dropdown({ dropdownTarget }) {
   const [open, setOpen] = useState(false);
-  const handleClick = (e) => {
-    if (open) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
-  };
-  const handleClickOutside = (e) => {
-    if (dropdownTarget.current && !dropdownTarget.current.contains(e.target)) {
-      setOpen(false);
-    }
-  };
 
-  React.useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
 
   return (
-    <div
-      ref={dropdownTarget}
-      className={`dropdown ${open ? "open" : ""}`}
-      onClick={(e) => handleClick(e)}
-    >
-      <button className="dropdown-btn">Pulsame para ver la animacion</button>
-      <div className="dropdown-container">
+    <div ref={dropdownTarget} className="dropdown" >
+      <button className="dropdown-btn" popoverTarget="dropdown-container">
+        Pulsame para ver la animacion
+      </button>
+      <div id="dropdown-container" className="dropdown-container" popover="auto">
         <ol>
           <li>
             <a className="dropdown-item" href="#">
