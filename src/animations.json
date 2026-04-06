@@ -236,7 +236,7 @@
   {
     "id": "reveal-from-bottom-right",
     "name": "Giro 3D",
-    "category": "dropdown",
+    "category": ["dropdown", "popup"],
     "type": "Reveal",
     "cssValue": "appearFromBottomRight",
     "description": "Aparece desde la esquina inferior derecha con máscara.",
@@ -245,7 +245,7 @@
   {
     "id": "reveal-from-top-left",
     "name": "Giro 3D",
-    "category": "dropdown",
+    "category": ["dropdown", "popup"],
     "type": "Reveal",
     "cssValue": "appearFromTopLeft",
     "description": "Aparece desde la esquina superior izquierda con máscara.",
@@ -254,7 +254,7 @@
   {
     "id": "reveal-from-top-right",
     "name": "Giro 3D",
-    "category": "dropdown",
+    "category": ["dropdown", "popup"],
     "type": "Reveal",
     "cssValue": "appearFromTopRight",
     "description": "Aparece desde la esquina superior derecha con máscara.",
