@@ -7,8 +7,8 @@ export function useAnimations({ initialCategory = "dropdown" }) {
   const [selectedType, setSelectedType] = useState("Todos");
   const availableTypes = useMemo(() => {
     // Filtramos primero por categoría para que los tipos sean relevantes al contexto
-    const categoryAnims = animations.filter(
-      (anim) => anim.category === selectedCategory,
+    const categoryAnims = animations.filter((anim) =>
+      Array.from(anim.category).includes(selectedCategory),
     );
 
     // Extraemos los tipos, añadimos 'Todos' y quitamos duplicados con Set
@@ -19,7 +19,7 @@ export function useAnimations({ initialCategory = "dropdown" }) {
   // Filtramos el array base directamente por la categoría inicial
   const filteredList = useMemo(() => {
     const list = animations.filter((anim) => {
-      const matchCategory = anim.category === selectedCategory;
+      const matchCategory = anim.category.includes(selectedCategory);
       const matchType = selectedType === "Todos" || anim.type === selectedType;
       return matchCategory && matchType;
     });
