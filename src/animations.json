@@ -165,7 +165,7 @@
     "id": "flip",
     "name": "Giro 3D",
     "category": ["dropdown", "popup"],
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpen",
     "description": "Abre girando en 3D sobre el eje X como una tapa.",
     "keyframes": "@keyframes flipOpen {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -174,7 +174,7 @@
     "id": "flip-slide-right",
     "name": "Giro 3D",
     "category": ["dropdown", "popup"],
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideRight",
     "description": "Giro 3D abriendo hacia la derecha.",
     "keyframes": "@keyframes flipOpenSlideRight {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(100%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -183,7 +183,7 @@
     "id": "flip-slide-left",
     "name": "Giro 3D",
     "category": ["dropdown", "popup"],
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideLeft",
     "description": "Giro 3D abriendo hacia la izquierda.",
     "keyframes": "@keyframes flipOpenSlideLeft {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(0%, 0%); transform-origin: top; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -192,7 +192,7 @@
     "id": "flip-slide-up",
     "name": "Giro 3D",
     "category": ["dropdown", "popup"],
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideUp",
     "description": "Gira desde abajo hacia arriba en perspectiva 3D.",
     "keyframes": "@keyframes flipOpenSlideUp {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, 50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"
@@ -201,7 +201,7 @@
     "id": "flip-slide-down",
     "name": "Giro 3D",
     "category": ["dropdown", "popup"],
-    "type": "Moderno",
+    "type": "3D",
     "cssValue": "flipOpenSlideDown",
     "description": "Gira hacia abajo desde la parte superior en 3D.",
     "keyframes": "@keyframes flipOpenSlideDown {\n  0% { transform: perspective(400px) rotateX(-90deg) translate(50%, -50%); transform-origin: bottom; }\n  100% { opacity: 1; transform: perspective(400px) rotateX(0deg) translate(50%, 0%); }\n}"

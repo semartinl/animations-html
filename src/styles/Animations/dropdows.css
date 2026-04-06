@@ -74,7 +74,7 @@
   }
 }
 
-@keyframes slideRight {
+@keyframes slideLeft {
   from {
     opacity: 0;
     translate: 30px 0px;
@@ -86,7 +86,7 @@
   }
 }
 
-@keyframes slideLeft {
+@keyframes slideRight {
   from {
     opacity: 0;
     translate: -30px 0px;
@@ -100,12 +100,10 @@
 
 @keyframes popIn {
   0% {
-    opacity: 0;
     transform: scale(0.5);
   }
 
   100% {
-    opacity: 1;
     transform: scale(1);
   }
 }
@@ -137,7 +135,7 @@
 @keyframes popInSlideLeft {
   0% {
     opacity: 0;
-    transform: scale(0.8) translate(100%, 0%);
+    transform: scale(0.5) translate(100%, 0%);
   }
 
   100% {
@@ -149,7 +147,7 @@
 @keyframes popInSlideRight {
   0% {
     opacity: 0;
-    transform: scale(0.8) translate(-100%, 0%);
+    transform: scale(0.5) translate(-100%, 0%);
   }
 
   100% {
@@ -269,12 +267,12 @@
 
 @keyframes reveal {
   0% {
-    height: 0;
+    clip-path: inset(0 0 100% 0);
   }
 
   100% {
     opacity: 1;
-    height: fit-content;
+    clip-path: inset(0 0 0 0);
   }
 }
 
@@ -337,6 +335,26 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes brightnessFade {
+  0% {
+    filter: brightness(0.5);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes comicEntry {
+  0% {
+    transform: rotateZ(1000deg) scale(0.2);
+  }
+
+  100% {
+    transform: rotateZ(0deg) scale(1);
   }
 }
 
