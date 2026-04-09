@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import CopyIcon from "../../public/icons/CopyIcon";
 import CodeEditor from "./CodeEditor";
 
-export default function CopyPopover({ anim, id = "copy-popover" }) {
+export default function CopyPopover({ anim, category, id = "copy-popover" }) {
   const [copyStatus, setCopyStatus] = useState({ type: "", success: false });
 
   if (!anim) return null;
 
   // Formateamos los snippets
-  const isPopup = anim?.category === "popup";
+  const isPopup = category === "popup";
 
   const htmlSnippet = isPopup
     ? `<button popovertarget="popup">Eliminar cuenta</button>\n<section id="popup" popover="manual">\n  <h4>¿Seguro que deseas eliminar la cuenta?</h4>\n  <button popovertarget="popup">Cancelar</button>\n  <button>Eliminar</button>\n</section>`

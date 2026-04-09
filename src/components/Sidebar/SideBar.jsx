@@ -12,6 +12,7 @@ import PopoverIcon from "../../../public/icons/PopoverIcon";
 import ToastIcon from "../../../public/icons/ToastIcon";
 import DarkModeIcon from "../../../public/icons/DarkModeIcon";
 import NavItemProx from "./NavItemProx";
+import TabIcon from "../../../public/icons/TabIcon";
 
 export default function SideBar() {
   const toggleMenuButton = useRef(null);
@@ -60,6 +61,9 @@ export default function SideBar() {
           <NavItem to={"/popups"} textButton={"Popovers"}>
             <PopoverIcon />
           </NavItem>
+          <NavItem to={"/toasts"} textButton={"Toasts"}>
+            <ToastIcon />
+          </NavItem>
           <NavItemProx textButton={"Elements"} to={"/elements"}>
             <ElementsIcon />
           </NavItemProx>
@@ -70,11 +74,9 @@ export default function SideBar() {
           <NavItemProx to={"/sidebars"} textButton={"Sidebars"}>
             <HeaderIcon styles={{ transform: "rotateZ(180deg)" }} />
           </NavItemProx>
-          <NavItemProx to={"/toasts"} textButton={"Toasts"}>
-            <ToastIcon />
-          </NavItemProx>
+
           <NavItemProx to={"/tabs"} textButton={"Tabs"}>
-            <ToastIcon />
+            <TabIcon />
           </NavItemProx>
         </ul>
       </nav>

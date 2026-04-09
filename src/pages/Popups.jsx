@@ -8,10 +8,15 @@ import Popup from "../components/Popup";
 
 export default function Popups() {
   const popupTarget = useRef();
-  const { filteredList, setSelectedType, selectedType, availableTypes } =
-    useAnimations({
-      initialCategory: "popup",
-    });
+  const {
+    filteredList,
+    selectedCategory,
+    setSelectedType,
+    selectedType,
+    availableTypes,
+  } = useAnimations({
+    initialCategory: "popup",
+  });
   const [selectedAnim, setSelectedAnim] = useState(null);
 
   return (
@@ -33,7 +38,7 @@ export default function Popups() {
           setSelectedAnim={setSelectedAnim}
         />
       </section>
-      <CopyPopover anim={selectedAnim} />
+      <CopyPopover anim={selectedAnim} category={selectedCategory} />
     </main>
   );
 }
