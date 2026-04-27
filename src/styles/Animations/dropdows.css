@@ -287,7 +287,6 @@
   }
 }
 
-
 @keyframes appearFromBottomLeft {
   0% {
     clip-path: polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%);
@@ -367,5 +366,13 @@
   100% {
     opacity: 1;
     filter: blur(0);
+  }
+}
+@keyframes iconAnimation {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 100%;
   }
 }

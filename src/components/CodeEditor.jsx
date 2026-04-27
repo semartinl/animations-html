@@ -9,7 +9,7 @@ export default function CodeEditor({
   containerStyle,
 }) {
   const editorRef = useRef(null);
-  function handleMount(editor, monaco) {
+  function handleMount(editor) {
     editorRef.current = editor;
 
     setTimeout(() => {
@@ -32,7 +32,7 @@ export default function CodeEditor({
         language={language}
         theme="vs-dark" // Puedes usar "light" o "vs-dark"
         value={code}
-        onChange={(e) => onChange(e, editorRef)}
+        onChange={(e) => onChange?.(e, editorRef)}
         onMount={handleMount}
         options={{
           readOnly, // Para que sea solo de copia

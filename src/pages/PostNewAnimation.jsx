@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import CodeEditor from "../components/CodeEditor";
 import useHtmlElements from "../hooks/useHtmlElements";
 import Playground from "../components/Playground";
+import { Helmet } from "react-helmet";
 
 export default function PostNewAnimation() {
   const {
@@ -135,6 +136,13 @@ button.btn:hover {
 
   return (
     <main id="main-playground">
+      <Helmet>
+        <title>Playground | YouAnimators</title>
+        <meta
+          name="description"
+          content="Playground de YouAnimators para probar en tiempo real nuevas animaciones para tus paginas webs, con codigo para copiar y pegar.\n Puedes probar componentes por defecto que te proporciona YouAnimators"
+        />
+      </Helmet>
       <div className="hero-section">
         <h2>Publica una animacion unica</h2>
         <p className="hero-subtitle">
