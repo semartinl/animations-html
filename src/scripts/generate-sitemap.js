@@ -3,7 +3,7 @@ import fs from "node:fs";
 
 const baseUrl = "https://www.youanimators.es";
 
-const routes = ["/", "/dropdowns", "/toasts", "popups", "new"];
+const routes = ["/", "/dropdowns", "/toasts", "/popups", "/new"];
 
 const urlset = create({ version: "1.0" }).ele("urlset", {
   xmlns: "https://www.sitemaps.org/schemas/sitemap/0.9",
