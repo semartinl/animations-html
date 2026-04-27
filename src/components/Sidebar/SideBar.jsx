@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import "@/styles/sidebar.css";
 import SideBarOpen from "@public/icons/SideBarOpen";
 import SideBarClose from "@public/icons/SideBarClose";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import NavItem from "./NavItem";
 import ElementsIcon from "../../../public/icons/ElementsIcon";
 import PlusIcon from "../../../public/icons/PlusIcon";

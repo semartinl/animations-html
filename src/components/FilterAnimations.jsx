@@ -34,8 +34,9 @@ export default function FilterAnimations({
 
       <div className="filters-list">
         <ol>
-          {availableTypes.map((type) => (
+          {availableTypes.map((type, i) => (
             <li
+              key={i}
               className={`${type === "Todos" ? "active" : ""}`}
               onClick={(e) => {
                 const active = e.target.parentElement.querySelector(".active");

@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router";
 
 export default function NavItemProx({ to, textButton, children }) {
   return (

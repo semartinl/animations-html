@@ -5,6 +5,7 @@ import CopyPopover from "../components/CopyPopover";
 import Dropdown from "../components/Dropdown";
 import FilterAnimations from "../components/FilterAnimations";
 import ListAnimationElementComplex from "../components/AnimationElements/ListAnimationElementComplex";
+import { Helmet } from "react-helmet";
 export default function Dropdowns() {
   const dropdownTarget = useRef();
   const {
@@ -19,6 +20,13 @@ export default function Dropdowns() {
   const [selectedAnim, setSelectedAnim] = useState(null);
   return (
     <main id="main">
+      <Helmet>
+        <title>Dropdowns | YouAnimators</title>
+        <meta
+          name="description"
+          content="Pagina de animaciones para tus dropdowns para copiar y pegar"
+        />
+      </Helmet>
       <h2>Animaciones para tus dropdowns</h2>
       <div className="muestra-dropdown">
         <Dropdown dropdownTarget={dropdownTarget} />

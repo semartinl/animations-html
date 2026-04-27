@@ -5,6 +5,7 @@ import ListAnimationElementComplex from "../components/AnimationElements/ListAni
 import CopyPopover from "../components/CopyPopover";
 import styles from "@/styles/popup-page.module.css";
 import Popup from "../components/Popup";
+import { Helmet } from "react-helmet";
 
 export default function Popups() {
   const popupTarget = useRef();
@@ -21,6 +22,14 @@ export default function Popups() {
 
   return (
     <main id={`${styles["main-popup"]}`}>
+      <Helmet>
+        <title>Popups | YouAnimators</title>
+        <meta
+          name="description"
+          content="Pagina de animaciones para tus popups para copiar y pegar"
+        />
+      </Helmet>
+
       <h2>Animaciones para tus popups</h2>
       <div className="muestra-popup">
         <Popup popupTarget={popupTarget} />

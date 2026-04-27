@@ -6,6 +6,7 @@ import ListAnimationElementComplex from "../components/AnimationElements/ListAni
 import CheckIcon from "../../public/icons/CheckIcon";
 import styles from "@/styles/toasts.module.css";
 import Toast from "../components/Toasts/Toast";
+import { Helmet } from "react-helmet";
 export default function Toasts() {
   const toastRef = useRef(null);
 
@@ -43,6 +44,13 @@ export default function Toasts() {
 
   return (
     <main id="main">
+      <Helmet>
+        <title>Toasts | YouAnimators</title>
+        <meta
+          name="description"
+          content="Animaciones para tus toast y notificaciones con el codigo para copiar y pegar"
+        />
+      </Helmet>
       <h2>Animaciones para tus dropdowns</h2>
       <div className="muestra-dropdown">
         <button

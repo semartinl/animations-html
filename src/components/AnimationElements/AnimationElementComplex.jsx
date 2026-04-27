@@ -40,7 +40,7 @@ export default function AnimationElementComplex({
         />
 
         <div className="buttons-animations">
-          <button id="copy" popovertarget="copy-popover" onClick={onOpenCopy}>
+          <button id="copy" popoverTarget="copy-popover" onClick={onOpenCopy}>
             <CopyIcon />
           </button>
           <button id="play" onClick={onApply}>
