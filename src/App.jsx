@@ -5,6 +5,7 @@ import Headers from "./pages/Headers";
 import Dropdowns from "./pages/Dropdowns";
 import PostNewAnimation from "./pages/PostNewAnimation";
 import Popups from "./pages/Popups";
+import Toasts from "./pages/Toasts";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/headers" element={<Headers />} />
         <Route path="/dropdowns" element={<Dropdowns />} />
         <Route path="/popups" element={<Popups />} />
+        <Route path="/toasts" element={<Toasts />} />
         <Route path="/new" element={<PostNewAnimation />} />
       </Routes>
     </>

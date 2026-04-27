@@ -2,7 +2,7 @@
   {
     "id": "slide-down",
     "name": "Deslizamiento",
-    "category": ["dropdown", "popup"],
+    "category": ["dropdown", "popup", "toast"],
     "type": "Entrada",
     "cssValue": "slideDown",
     "description": "Cae desde arriba con transición suave.",
@@ -11,7 +11,7 @@
   {
     "id": "slide-up",
     "name": "Deslizamiento",
-    "category": ["dropdown", "popup"],
+    "category": ["dropdown", "popup", "toast"],
     "type": "Entrada",
     "cssValue": "slideUp",
     "description": "Sube suave desde abajo.",
@@ -20,7 +20,7 @@
   {
     "id": "slide-left",
     "name": "Deslizamiento",
-    "category": ["dropdown", "popup"],
+    "category": ["dropdown", "popup", "toast"],
     "type": "Entrada",
     "cssValue": "slideLeft",
     "description": "Entra desde la izquierda con deslizamiento limpio.",
@@ -74,7 +74,7 @@
   {
     "id": "pop-in",
     "name": "Burbuja",
-    "category": "dropdown",
+    "category": ["dropdown", "popup", "toast"],
     "type": "Énfasis",
     "cssValue": "popInCenter",
     "description": "Aparece con escala desde el centro",
@@ -83,7 +83,7 @@
   {
     "id": "fade-in-pop-in",
     "name": "Burbuja",
-    "category": ["dropdown", "popup"],
+    "category": ["dropdown", "popup", "toast"],
     "type": "Énfasis",
     "cssValue": "popIn",
     "description": "Burbuja rápida con rebote central.",
@@ -266,6 +266,15 @@
     "category": ["dropdown", "popup"],
     "type": "Moderno",
     "cssValue": "softBlur",
+    "description": "Se desenfoca al inicio y termina nítido al aparecer.",
+    "keyframes": "@keyframes softBlur {\n  0% { opacity: 1; filter: blur(10px); }\n  100% { opacity: 1; filter: blur(0); }\n}"
+  },
+  {
+    "id": "icon-animation",
+    "name": "Icon",
+    "category": ["toast"],
+    "type": "Moderno",
+    "cssValue": "iconAnimation",
     "description": "Se desenfoca al inicio y termina nítido al aparecer.",
     "keyframes": "@keyframes softBlur {\n  0% { opacity: 1; filter: blur(10px); }\n  100% { opacity: 1; filter: blur(0); }\n}"
   }

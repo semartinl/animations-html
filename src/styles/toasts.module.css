@@ -1,0 +1,148 @@
+@import url("./Animations/dropdows.css");
+.toast-example-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: fixed;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  right: max(24px, env(safe-area-inset-right));
+  width: min(420px, calc(100vw - 32px));
+  z-index: 50;
+
+  .toast {
+    --animation: iconAnimation;
+    --animation-time: 0.3s;
+    --toast-accent: var(--success);
+    --toast-accent-contrast: var(--on-success);
+    --toast-bg: color-mix(
+      in srgb,
+      var(--surface-container-highest) 82%,
+      transparent
+    );
+    --toast-border: color-mix(
+      in srgb,
+      var(--toast-accent) 30%,
+      rgba(255, 255, 255, 0.12)
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    background: var(--toast-bg);
+    color: var(--text);
+    border: 1px solid var(--toast-border);
+    box-shadow:
+      0 18px 40px rgba(0, 0, 0, 0.45),
+      0 1px 0 rgba(255, 255, 255, 0.06) inset;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: var(--animation) var(--animation-time)
+      cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform, opacity;
+    svg {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+      padding: 7px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--toast-accent) 85%, black);
+      color: var(--toast-accent-contrast);
+    }
+
+    :global(.description) {
+      flex: 1 1 auto;
+      font-size: 14px;
+      line-height: 1.25;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: color-mix(in srgb, var(--text) 92%, var(--muted));
+      overflow: hidden;
+      display: -webkit-box;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .close {
+      flex: 0 0 auto;
+      color: color-mix(in srgb, var(--text) 70%, transparent);
+      border-radius: 12px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      width: 34px;
+      height: 34px;
+      line-height: 30px;
+      font-size: 24px;
+      cursor: pointer;
+      transition:
+        background 0.18s ease,
+        border-color 0.18s ease,
+        transform 0.12s ease,
+        color 0.18s ease;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.14);
+        color: var(--text);
+      }
+      &:active {
+        transform: scale(0.98);
+      }
+      &:focus-visible {
+        outline: 2px solid color-mix(in srgb, var(--toast-accent) 65%, white);
+        outline-offset: 2px;
+      }
+    }
+
+    &:global(.correct) {
+      --toast-accent: var(--success);
+      --toast-accent-contrast: var(--on-success);
+      --toast-bg: color-mix(
+        in srgb,
+        var(--success-container) 55%,
+        var(--surface-container-highest)
+      );
+    }
+
+    &:global(.error) {
+      --toast-accent: #ff4d6d;
+      --toast-accent-contrast: #18020a;
+      --toast-bg: color-mix(
+        in srgb,
+        #2a0f16 65%,
+        var(--surface-container-highest)
+      );
+    }
+
+    &:global(.warning) {
+      --toast-accent: #ffb020;
+      --toast-accent-contrast: #140b00;
+      --toast-bg: color-mix(
+        in srgb,
+        #2a1a06 65%,
+        var(--surface-container-highest)
+      );
+    }
+
+    &:global(.info) {
+      --toast-accent: #4da3ff;
+      --toast-accent-contrast: #04101b;
+      --toast-bg: color-mix(
+        in srgb,
+        #0b1c2c 65%,
+        var(--surface-container-highest)
+      );
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast-example-list {
+    .toast {
+      animation: none;
+    }
+  }
+}

@@ -3,13 +3,16 @@ import React, { useState } from "react";
 export default function Dropdown({ dropdownTarget }) {
   const [open, setOpen] = useState(false);
 
-
   return (
-    <div ref={dropdownTarget} className="dropdown" >
-      <button className="dropdown-btn" popoverTarget="dropdown-container">
+    <div ref={dropdownTarget} className="dropdown">
+      <button className="btn dropdown-btn" popoverTarget="dropdown-container">
         Pulsame para ver la animacion
       </button>
-      <div id="dropdown-container" className="dropdown-container" popover="auto">
+      <div
+        id="dropdown-container"
+        className="dropdown-container"
+        popover="auto"
+      >
         <ol>
           <li>
             <a className="dropdown-item" href="#">

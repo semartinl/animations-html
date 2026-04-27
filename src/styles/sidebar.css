@@ -150,8 +150,9 @@
     backdrop-filter: blur(6px);
 
     svg {
-      width: 50px;
-      min-width: 50px !important;
+      width: 25px;
+      min-width: 25px;
+      margin: 0 12px;
       color: var(--sb-text);
     }
 
