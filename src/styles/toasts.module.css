@@ -58,6 +58,7 @@
       line-height: 1.25;
       font-weight: 600;
       letter-spacing: -0.01em;
+      text-wrap: nowrap;
       color: color-mix(in srgb, var(--text) 92%, var(--muted));
       overflow: hidden;
       display: -webkit-box;
